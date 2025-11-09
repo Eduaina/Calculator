@@ -1,7 +1,92 @@
-:root {}
+:root {
+    font-size: 16px;
+}
 
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main {
+    width: 18rem;
+    height: 80vh;
+    border-radius: 1.875rem;
+    border: 5px solid rgb(90, 90, 231);
+    display: flex;
+    flex-direction: column;
+}
+
+.icons__display {
+    width: 100%;
+    height: 35vh;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.7rem;
+    font-size: 0.8rem;
+    position: relative;
+}
+
+#empty-black {
+    width: 7.5rem;
+    background-color: black;
+    height: 1.9rem;
+    border-bottom-left-radius: 1.3rem;
+    border-bottom-right-radius: 1.3rem;
+    position: relative;
+    top: -0.8rem;
+
+}
+
+img {
+    width: 18px;
+    height: 18px;
+}
+
+.screen {
+    display: flex;
+}
+
+.dropdown__history {
+    display: flex;
+    flex-direction: column;
+    margin-top: -1rem;
+    font-size: 0.63rem;
+    flex: 1;
+}
+
+.dropdown__history article {
+    font-weight: 600;
+}
+
+.dropdown__history aside {
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.display {
+    flex: 1;
+}
+
+
+.show {
+    border: 3px solid brown;
+    height: 50px;
+    margin: 10px;
+}
+
+.button__order {
+    width: 100%;
+    height: 60vh;
 }
