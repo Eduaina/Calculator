@@ -1,5 +1,13 @@
 :root {
     font-size: 16px;
+    --black: #010101;
+    --white: #fff;
+    --blue: #3579F6;
+    --top-color: #FBFBFB;
+    --bottom-color: #F2F3F7;
+    --light-txtcolor: #B3B3B3;
+    --txtcolor: #696969;
+    --blue-txt: #72A2F9;
 }
 
 body {
@@ -12,20 +20,23 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
 }
 
 #main {
-    width: 18rem;
-    height: 80vh;
+    width: 17rem;
+    height: 90vh;
     border-radius: 1.875rem;
     border: 5px solid rgb(90, 90, 231);
     display: flex;
     flex-direction: column;
+    background-color: var(--top-color);
 }
 
 .icons__display {
     width: 100%;
-    height: 35vh;
+    height: 45vh;
 }
 
 .top{
@@ -34,17 +45,18 @@ body {
     padding: 0.7rem;
     font-size: 0.8rem;
     position: relative;
+    color: var(--black);
+    font-weight: 700;
 }
 
 #empty-black {
     width: 7.5rem;
-    background-color: black;
+    background-color: var(--black);
     height: 1.9rem;
     border-bottom-left-radius: 1.3rem;
     border-bottom-right-radius: 1.3rem;
     position: relative;
     top: -0.8rem;
-
 }
 
 img {
@@ -54,39 +66,168 @@ img {
 
 .screen {
     display: flex;
+    height: 25.3vh;
 }
 
 .dropdown__history {
     display: flex;
     flex-direction: column;
     margin-top: -1rem;
-    font-size: 0.63rem;
+    font-size: 0.73rem;
     flex: 1;
 }
 
 .dropdown__history article {
     font-weight: 600;
+    margin: 0.7rem 0 0 0.7rem;
+    font-size: 1rem;
 }
 
 .dropdown__history aside {
-    height: 15vh;
+  display: none;
+}
+
+.dropdown__history aside.open {
+    height: 18vh;
+    width: 9.5vw;
     display: flex;
     flex-direction: column;
-    margin: 1rem;
+    margin: auto .5rem;
+    background-color: var(--bottom-color);
+}
+
+aside p {
+    margin-top: -5px;
 }
 
 .display {
     flex: 1;
 }
 
+.history {
+    margin: .625rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 4px;
+}
+
+.history-log {
+  max-height: 60rem;
+  width: 8.25rem;
+  overflow-y: auto;
+  font-size: 0.9rem;
+  color: var(--txtcolor);
+  padding: 0.5rem;
+  border-top: 1px solid #ddd;
+  display: none;
+  overflow-y: scroll;
+  margin-top: .625rem;
+}
+
+.history-log.view{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: .625rem;
+    font-size: 1rem;
+    
+}
+
 
 .show {
-    border: 3px solid brown;
-    height: 50px;
-    margin: 10px;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -0.625rem;
+    padding: .625rem;
+}
+
+.calculations {
+    color: var(--txtcolor);
+    font-size: 1rem;
+
+}
+
+.result {
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: var(--black);
+}
+
+a {
+    text-decoration: none;
+    color: #00000096;
+}
+
+a:active, a:hover {
+    background-color: #6969691f;
+    color: #B3B3B3;
 }
 
 .button__order {
-    width: 100%;
-    height: 60vh;
+  width: 100%;
+  border-bottom-right-radius: 1.876rem;
+  border-bottom-left-radius: 1.876rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+  gap: 2px;
+  box-sizing: border-box;
+  background-color: var(--bottom-color);
+  position: relative;
+  padding: .3125rem;
+  margin-top: 1rem;
+}
+
+input,
+button {
+  width: 2.8rem;
+  height: 2.7rem;
+  border-radius: 45%;
+  border: none;
+  margin: 5px;
+  background-color: white;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.black {
+    color: var(--black);
+}
+
+.blue {
+    color: var(--blue);
+}
+
+.diff {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.black:hover {
+    color: hsla(0, 0%, 70%, 0.748);
+}
+
+.blue:hover {
+    color: hsla(219, 91%, 75%, 0.741);
+}
+
+.diff:hover {
+    background-color: hsla(219, 91%, 75%, 0.741);
+}
+
+.black:active, .blue:active, .diff:active {
+    background-color: hsla(219, 72%, 24%, 0.721);
+} 
+
+.line {
+    background-color: black;
+    height: .3125rem;
+    width: 6rem;
+    position: absolute;
+    bottom: .1875rem;
+    border-radius: 1.25rem;
 }

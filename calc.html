@@ -22,13 +22,13 @@
             <div class="screen">
                 <section class="dropdown__history">
                         <article>
-                            <p>Calculator <span>
-                                <img src="images/down-arrow.png" alt="Dropdown icon">
-                                <img src="images/drop-up.png" alt="Drop-up icon">
+                            <p id="drop">Calculator <span>
+                                <img src="images/down-arrow.png" alt="Dropdown icon" id="ddown">
+                                <!-- <img src="images/drop-up.png" alt="Drop-up icon"> -->
                             </span></p>
                         </article>
 
-                        <aside>
+                        <aside id="aside">
                             <p>
                                 <a href="#">
                                 <img src="images/dollar-symbol.png" alt="Currency symbol">
@@ -50,40 +50,45 @@
                                 Fraction</a></p>
                         </aside>        
                 </section>
-                <section class="display">
+                <section class="ResultappendToResult">
                     <div class="history">
                         <img src="images/history.png" alt="History icon">
+                        <div class="history-log" id="historyLog"></div>
                     </div>
                     <div>
-                        <div class="show claculations"></div>
-                        <div class=" show result"></div>
+                        <div class="show calculations" id="calculations"></div>
+                        <div class=" show result" id="result"></div>
                     </div>
                 </section>
             </div>
         </section>
 
-        <!-- <form class="button__order">
-            <input type="button" value="AC">
-            <input type="button" value="+/-">
-            <input type="button" value="%">
-            <input type="button" value="&#xf7;">
-            <input type="button" value="7">
-            <input type="button" value="8">
-            <input type="button" value="9">
-            <input type="button" value="&#xd7;">
-            <input type="button" value="4">
-            <input type="button" value="5">
-            <input type="button" value="6">
-            <input type="button" value="-">
-            <input type="button" value="1">
-            <input type="button" value="2">
-            <input type="button" value="3">
-            <input type="button" value="+">
-            <input type="button" value="0">
-            <input type="button" value=".">
-            <button> <img src="images/icons8-remove-24.png" alt="Remove icon"></button>
-            <input type="button" value="=">
-        </form> -->
+        <form class="button__order">
+            <input type="button" value="AC" class="blue" onclick="clearResult()">
+            <input type="button" value="+/-" class="blue" onclick="changeSign('+/-')">
+            <input type="button" value="%" class="blue" onclick="appendToResult('%')">
+            <input type="button" value="&#xf7;" class="blue" onclick="appendToResult('/')">
+            <input type="button" value="7" class="black" onclick="appendToResult('7')">
+            <input type="button" value="8" class="black" onclick="appendToResult('8')">
+            <input type="button" value="9" class="black" onclick="appendToResult('9')">
+            <input type="button" value="&#xd7;" class="blue" onclick="appendToResult('*')">
+            <input type="button" value="4" class="black" onclick="appendToResult('4')">
+            <input type="button" value="5" class="black" onclick="appendToResult('5')">
+            <input type="button" value="6" class="black" onclick="appendToResult('6')">
+            <input type="button" value="-" class="blue" onclick="appendToResult('-')">
+            <input type="button" value="1" class="black" onclick="appendToResult('1')">
+            <input type="button" value="2" class="black" onclick="appendToResult('2')">
+            <input type="button" value="3" class="black" onclick="appendToResult('3')">
+            <input type="button" value="+" class="blue" onclick="appendToResult('+')"> 
+            <input type="button" value="0" class="black" onclick="appendToResult('0')">
+            <input type="button" value="." class="black" onclick="appendToResult('.')">
+            <button onclick="removeInput()"> <img src="images/icons8-remove-24.png" alt="Remove icon"></button>
+            <input type="button" value="=" class="diff" onclick="calculateResult()">
+            <br>
+            <br>
+            <div class="line"></div>
+        </form>
+        
     </main>
 
     <script src="calc.js"></script>
