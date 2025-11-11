@@ -65,29 +65,32 @@
 
         <form class="button__order">
             <input type="button" value="AC" class="blue" onclick="clearResult()">
-            <input type="button" value="+/-" class="blue" onclick="changeSign('+/-')">
-            <input type="button" value="%" class="blue" onclick="appendToResult('%')">
-            <input type="button" value="&#xf7;" class="blue" onclick="appendToResult('/')">
-            <input type="button" value="7" class="black" onclick="appendToResult('7')">
-            <input type="button" value="8" class="black" onclick="appendToResult('8')">
-            <input type="button" value="9" class="black" onclick="appendToResult('9')">
-            <input type="button" value="&#xd7;" class="blue" onclick="appendToResult('*')">
-            <input type="button" value="4" class="black" onclick="appendToResult('4')">
-            <input type="button" value="5" class="black" onclick="appendToResult('5')">
-            <input type="button" value="6" class="black" onclick="appendToResult('6')">
-            <input type="button" value="-" class="blue" onclick="appendToResult('-')">
-            <input type="button" value="1" class="black" onclick="appendToResult('1')">
-            <input type="button" value="2" class="black" onclick="appendToResult('2')">
-            <input type="button" value="3" class="black" onclick="appendToResult('3')">
-            <input type="button" value="+" class="blue" onclick="appendToResult('+')"> 
-            <input type="button" value="0" class="black" onclick="appendToResult('0')">
-            <input type="button" value="." class="black" onclick="appendToResult('.')">
-            <button onclick="removeInput()"> <img src="images/icons8-remove-24.png" alt="Remove icon"></button>
-            <input type="button" value="=" class="diff" onclick="calculateResult()">
-            <br>
-            <br>
+            <input type="button" value="+/-" class="blue" onclick="changeSign()">
+            <input type="button" value="%" class="blue" onclick="chooseOperator('%')">
+            <input type="button"  value="&#xf7;" class="blue" onclick="chooseOperator('/')">
+            <input type="button" value="7" class="black" onclick="appendNumber('7')">
+            <input type="button" value="8" class="black" onclick="appendNumber('8')">
+            <input type="button" value="9" class="black" onclick="appendNumber('9')">
+            <input type="button" value="&#xd7;" class="blue" onclick="chooseOperator('*')">
+            <input type="button" value="4" class="black" onclick="appendNumber('4')">
+            <input type="button" value="5" class="black" onclick="appendNumber('5')">
+            <input type="button" value="6" class="black" onclick="appendNumber('6')">
+            <input type="button" value="−" class="blue" onclick="chooseOperator('-')">
+            <input type="button" value="1" class="black" onclick="appendNumber('1')">
+            <input type="button" value="2" class="black" onclick="appendNumber('2')">
+            <input type="button" value="3" class="black" onclick="appendNumber('3')">
+            <input type="button" value="+" class="blue" onclick="chooseOperator('+')">
+            <input type="button" value="0" class="black" onclick="appendNumber('0')">
+            <input type="button" value="." class="black" onclick="appendNumber('.')">
+            <button type="button" onclick="removeInput()">
+                <img src="images/icons8-remove-24.png" alt="Remove icon">
+            </button>
+            <input type="button" value="=" class="diff" onclick="compute()">
+
+            <br><br>
             <div class="line"></div>
         </form>
+
         
     </main>
 
